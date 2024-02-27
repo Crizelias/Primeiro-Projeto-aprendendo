@@ -75,9 +75,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   animation: slide-back 0.2s;
+  cursor: pointer;
 }
 .light #switch button {
   animation: slide-in 0.2s forwards;
+  
 }
 
 #switch button:hover {
@@ -158,5 +160,30 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+/*  Media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+}
+.light {
+   --bg-url:url(./assets/bg-desktop-light.jpg);
+}
+}
 
+/* animation*/
 
+@keyframes slide-in{
+  from{
+    left:0
+  }
+  to{
+    left:50%
+  }
+}
+@keyframes slide-back{
+  from{
+    left:50%
+  } to{
+    left:0
+  }
+}
